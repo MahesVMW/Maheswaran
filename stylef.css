@@ -135,9 +135,10 @@ button:hover span::after {
                 right: 0;
                 left: 0;
                 background: url(./mahe.jfif) no-repeat center;
-                height: 800px;
+                height: 840px;
                 width: 110%;
                 z-index:-1;
+                
               }
               .main{
                 display: flex;
@@ -278,12 +279,13 @@ button:hover span::after {
   min-height: 25rem;
   background: #191A19;
   position: absolute;
-  color: rgb(43, 184, 202);
+  color: rgb(202, 207, 207);
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: 0.3s;
   cursor: pointer;
   margin-left: 20%;
+
 }
 
 .face {
@@ -299,7 +301,7 @@ button:hover span::after {
   transition: 0.3s;
 }
 .face1 {
-  margin-top: 30px;
+ 
   background-color: black;
 }
 .face1 h1 {
@@ -307,10 +309,10 @@ button:hover span::after {
   width: 120%;
   height:20px;
   padding-top: 5px;
-  padding-left: 12px;
+  padding-left: 10px;
   border-radius: 5px;
-  font-size: 10px;
-  margin-top: 40px;
+  font-size: 17px;
+  margin-top:65px;
   letter-spacing: 1px;
   font-weight: 700;
   text-transform: capitalize;
@@ -402,7 +404,7 @@ body {
 
 
 .card2-back {
-  color: #418fb6;
+  color: #dae3e7;
   transform: rotateY(180deg);
   font-family: cursive;
 }
@@ -418,7 +420,7 @@ body {
   width: 50px;
   height:30px;
   border: 1px solid rgb(87, 85, 85);
-  background-color: rgb(22, 55, 66);
+  background-color: lightskyblue;
   border-radius: 10px;
   color: black;
 }
@@ -428,9 +430,10 @@ body {
   font-size:13px;
   margin-top: 4px;
   margin-left: 10%;
-  color:#145891 ;
+  color:#d9dee2;
+  border: 1px dotted white;
+  border-radius: 10px;
   padding-top: 10px;
- 
  
 }
 .cont1:hover{
@@ -447,7 +450,9 @@ body {
   font-size:13px;
   margin-top: 4px;
   margin-left: 10%;
-  color:#145891 ;
+  color:#d9dee2;
+  border: 1px dotted white;
+  border-radius: 10px;
   padding-top: 10px;
 }
 .cont2:hover{
@@ -463,7 +468,9 @@ body {
   font-size:13px;
   margin-top: 10px;
   margin-left: 10%;
-  color:#145891 ;
+  color:#d9dee2;
+  border: 1px dotted white;
+  border-radius: 10px;
   padding-top: 10px;
 }
 .cont3:hover{
@@ -478,6 +485,9 @@ body {
   height:70px;
   font-size:13px;
   margin-top: 10px;
+  color:#d9dee2;
+  border: 1px dotted white;
+  border-radius: 10px;
   margin-left: 10%;
   color:#145891 ;
   padding-top: 10px;
@@ -502,82 +512,101 @@ body {
       body{
         font-family: Helvetica, Arial, sans-serif;
       }
-      .skills-bar{
-        width: 50%;
-        height: 50%;
-        margin-top:70px;
-        background-color: #000000;
-      }
-      @keyframes load{
-        from {
-          width: 0%
-        }
-      }
-      @-webkit-keyframes load{
-        from {
-          width: 0%
-        }
-      }
-      @-moz-keyframes load{
-        from {
-          width: 0%
-        }
-      }
-      @-o-keyframes load{
-        from {
-          width: 0%
-        }
+      
+      
+      .logo-holder {
+          background:black;
+          width: 380px;
+          height: 320px;
+          position: relative;
+          margin-top:5%;
+          padding-top: 12px;
+          margin-left: 25%;
+          padding-bottom: 24px;
+          text-align: left;
+          color:rgb(242, 247, 250);
+          padding-left: 10px;
+          font-weight: smaller;
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+      .bg {
+      
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        background: url(http://boutique.flarework.com/wp-content/themes/boutique/img/logo_large.png) center 0px no-repeat ;
+          background-size: contain;
+          
       }
       
-      .bar{
-        background-color: #EEE;
-        padding: 2px;
-        border-radius: 15px;
-        margin-bottom: 5px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: 15px;
-        font-size: 14px;
-        color: black;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-      }
-      .bar::before{
-        content:  attr(data-skill);
-        background-color: #f3b0ff;
-        display: inline-block;
-        padding: 5px 0 5px 10px;
-        border-radius: inherit;
-        animation: load 2s 0s;
-        -webkit-animation: load 2s 0s;
-        -moz-animation: load 2s 0s;
-        -o-animation: load 2s 0s;
+      .bar {
+          position: relative;
+          height: 20px;
+          background: #6a6a6a;
+          width:  0%;
+          top: 0px;
+          left: 18px;
+          margin-bottom: 15px;
+          border: 1px solid whitesmoke;
+          box-shadow: 0 0 3px rgba(192,192,192,0.9);
+          animation: fill 2s infinite alternate, colors 2s infinite alternate;
       }
       
-      .bar.front::before{
-        background-color: #cf9e08;
-      }
-      .bar.back::before{
-        background-color: #418fb6;
+      
+      .bar.fill1 {
+        animation: fill-1 2s infinite alternate, colors 2s infinite alternate;
       }
       
+      .bar.fill2 {
+         animation:  fill-2 2s infinite alternate, colors 2s infinite alternate;
+      }
+      
+      
+      .bar.fill3 {
+         animation:  fill-3 2s infinite alternate, colors 2s infinite alternate;
+      }
+      
+      
+      
+      
+      
+      
+      @keyframes fill {
+        0%   { width: 0; }
+       
+        100% { width: 120px; }
+      }
+      
+      @keyframes fill-1 {
+        0%   { width: 0; }
+       
+        100% { width: 150px; }
+      }
+      
+      @keyframes fill-2 {
+        0%   { width: 0; }
+        
+        100% { width: 170px; }
+      }
+      
+      @keyframes fill-3 {
+        0%   { width: 0; }
+        
+        100% { width: 140px; }
+      }
+      @keyframes colors {
+        0% { background-color: #5a5a5a;}
      
-      .bar.basic::before{
-        width: calc(70% - 10px);
+        100% { background-color: #0c801f;}
       }
-      .bar.intermediate::before{
-        width: calc(60% - 10px);
-      }
-      .bar.advanced::before{
-        width: calc(75% - 10px);
-      }
-      .bar.expert::before{
-        width: calc(90% - 10px);
-      }
+      
       #contact{
         width: 100%;
         height:100vh;
-        background-color: #145891;
+        background-color: #8EC1EB;
+        margin-top: 50px;
       }
     .container{
       width:20%;
@@ -585,7 +614,7 @@ body {
       display:flex;
       align-items:center;
       justify-content: center;
-      margin-top: 10%;
+      margin-top: 50px;
       margin-left: 10%;
     }
       form{
@@ -598,6 +627,7 @@ body {
         border-radius: 10px;
         margin-left: 5%;
         margin-bottom: 10%;
+        margin-top: 20px;
       }
       form h3{
         color: #555;
