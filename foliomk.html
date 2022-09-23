@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylef.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home"><button class="btn-6" ><span>Home</span></button></a></li>
+            <li><a href="#about"> <button class="btn-6"><span>about</span></button></a></li>
+            <li><a href="#skills"><button class="btn-6"><span>skills</span></button></a></li>
+            <li><a href="#portfolio"> <button class="btn-6"><span> portfolio</span></button></a></li>
+            <li><a href="#contact"> <button  class="btn-6"><span>contact</span></button></a></li>
+           
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM MAHESWARAN<br><span>WEB DEVELOPER</span></h1>
+            <a href="#" id="btn-gra" class="btn-gra">Hire me</a>
+            <div class="social-icons">
+         <a href="https://www.facebook.com/profile.php?id=100025651733100" class="fa fa-facebook"></a>
+<a href="https://www.linkedin.com/public-profile/settings" class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/mahes_waran_vmw/" class="fa fa-instagram"></a>
+           </div>
+        </div>
+
+    </section>
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+        <div class="card">
+            <div class="face face1">
+           <div><h1>MAHESWARAN</h1></div> 
+              <p>I am maheswaran.I have completed my UG graduation in 2021.I am interested in developing websites and templates and so i pursued web development course  </p>
+            </div>
+            <div class="face face2">
+            </div>
+          </div>
+          <div class="card2">
+            <div class="card2-inner">
+              <div class="card2-front">
+               <h1>Qualifications</h1>
+              </div>
+              <div class="card2-back">
+                <div class="year">2000</div>
+                <div class="cont1">
+                  <p>Born on 22nd March 2000 in oddanchatram,Dindugal,Tamilnadu</p>
+                </div>
+                <div class="year">2016</div>
+                <div class="cont2">
+                  <p>completed SSLC in SPM oxford matric higher secondary school,oddanchatram with 94%.</p>
+                </div>
+                <div class="year">2018</div>
+                <div class="cont3">
+                  <p>completed HSC in SPM oxford matric higher secondary school,oddanchatram with 83%.</p>
+                </div>
+                <div class="year">2021</div>
+                <div class="cont3">
+                  <p>completed my UG graduation BCA degree in Gurunanak college,velachery with CCPA of 7.7.</p>
+                </div>
+                    </section>
+    <section id="skills">
+      <h1>MY SKILLS</h1>
+      <div class="logo-holder">
+        <div class="bg"></div>
+        <p>html</p>
+        <div class="bar">70%</div>
+        <p>css</p>
+        <div class="bar fill1">80%</div>
+        <p>javascript</p>
+        <div class="bar fill2">90%</div>
+        <p>bootstrap</p>
+         <div class="bar fill3">75%</div>
+      </div>
+     
+  </section>
+  <section id="contact">
+    <h1>CONTACT</h1>
+   <div class="container">
+    <form onsubmit="sendemail(); reset(); return false;">
+      <h3>contact me</h3>
+      <input type="text" id ="name" placeholder="your name" required>
+      <input type="email" id ="email" placeholder="email id" required>
+      <input type="text" id ="phone" placeholder="phone no" required>
+      <textarea id="message"  rows="4"  column="30" placeholder="message here"></textarea>
+    <input type="button" value="send" onclick="sendEmail()">
+    </form>
+   </div>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script>
+    function sendEmail(){
+
+
+      
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "maheswaran2220@gmail.com",
+        Password : "MKpopz",
+        To : 'maheswaran2220@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "new contact form enquiry",
+        Body : "Name: " + document.getElementById("name").value
+  + " <br> Email: " + document.getElementById("email").value
+  + " <br> Phone no: " + document.getElementById("phone").value
+  + " <br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("message send successfully!")
+    );
+    }
+   </script>
+      
+  </section>
+</body>
+</html>
