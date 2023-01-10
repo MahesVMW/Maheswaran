@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>E-commerce website</title>
+    <!-- Start of Async Drift Code -->
+<script>
+  "use strict";
+  
+  !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('67kgexgtb7px');
+  </script>
+  <!-- End of Async Drift Code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style2.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="http://127.0.0.1:5500/view.html">
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka'>
+  <link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+       emailjs.init("n5WQQM4PWmRKY45jP");
+    })();
+ </script>
+  </head>
+  <body>
+ <main>
+  <section id="header">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul id="navbar">
+               <li><a class="active" href="#home"><i class="bi bi-house-door-fill"></i>home</a></li>
+                <li>
+                  <a href="#products"><i class="bi bi-collection"></i>collections</a>
+    
+              </li>
+                
+               <li><a href="#blog"><i class="fa-solid fa-blog"></i>blog</a></li>
+               <li><a href="#about"><i class="bi bi-file-person-fill"></i> about</a></li>
+               <li><a href="#contact"><i class="fa-regular fa-address-book"></i> contact</a></li>
+                
+        </ul>
+    </div>
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./DC.1.png" class="logo"alt="" style="width:70px;height:50px;"> </span>
+    </div>
+    <div class="cart-modal-overlay">
+      <div class="cart-modal">
+        <i id="close-btn" class="fas fa-times"></i>
+       
+          <h1 class="cart-is-empty">Cart is empty</h1>
+        
+          <div class="product-rows">
+          </div>
+          <div class="total">
+            <h1 class="cart-total">TOTAL</h1>
+              <span class="total-price">$0</span>
+                <button class="purchase-btn">PURCHASE</button>
+          </div>
+        </div>
+  </div>
+        
+  <!--   end of cart modal -->
+    <div class="cart-btn">
+      <i id="cart"  class="bi bi-cart-fill"></i>
+        <span class ="cart-quantity">0</span>
+    </div>
+       </section>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+     <section id="home">
+      <h4>Trade in offers</h4>
+      <h2>Super value deals</h2>
+      <h1>On all products</h1>
+      <p>Save more with coupons & up to 70% off</p>
+      <button>shop now</button>
+   </section>
+<!--  products  -->
+<section id="products">
+<section class="collections">
+    <h2>COLLECTIONS</h2>
+    <div class="collections container">
+        <div class="content">
+            <img src="./collection1.png" alt="img" />
+            <div class="img-content">
+                <p>Clothing Collections</p>
+                <button><a href="#clothes">SHOP NOW</a></button>
+            </div>
+        </div>
+        <div class="content2">
+            <img src="./collection2.jfif" alt="img" />
+            <div class="img-content2">
+                <p>Shoes Spring</p>
+                <button><a href="#Shoes">SHOP NOW</a></button>
+            </div>
+        </div>
+        <div class="content3">
+            <img src="./collection3.jfif" alt="img" />
+            <div class="img-content3">
+                <p>Accessories</p>
+                <button><a href="#accessories">SHOP NOW</a></button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="banner">
+  <h4>Repair Services</h4>
+  <h2>Up to <span>70% off</span> All T-shirts &Accessories </h2>
+  <button class="normal">Explore More</button>
+</section>
+<section id="clothes">
+  <div class="items-container">
+    <div class="card-1 card">
+      <img class="product-image" src="./shirt6.jfif" alt=""style="margin-right: 5%;">
+      <h2 class="product-title">Checked Shirt</h2>
+     <button class="add-to-cart">Add to cart</button>
+     <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+     <div class="star">
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+       </div>
+          <span class="product-price">$27</span>
+    </div>
+    <div class="card-2 card">
+      <img class="product-image" src="./shirt4.jfif" alt=""style="margin-right: 5%;">
+      <h2 class="product-title">Formal shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-3 card">
+      <img class="product-image" src="./tshirt2.jfif" alt="" width="230" height="230" style="margin-right: 5%;">
+      <h2 class="product-title">T-shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+        <button class="add-to-cart">Add to cart</button>
+        <div class="star">
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+       </div>
+          <span class="product-price">$1150</span>
+    </div>
+    <div class="card-4 card">
+      <img class="product-image" src="./shirt5.jfif" alt=""style="margin-right: 5%;">
+      <h2 class="product-title">full hand shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+         <button class="add-to-cart">Add to cart</button>
+         <div class="star">
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+       </div>
+        <span class="product-price">$1575</span>
+    </div>
+    <div class="card-5 card">
+      <img class="product-image" src="./t-shirt1.jfif" alt=""style="margin-left: 5%;">
+      <h2 class="product-title">Half hand T-shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+      <span class="product-price">$1230</span>
+    </div>
+    <div class="card-6 card">
+      <img class="product-image" src="./shirt2.png" alt=""  width="250" height="300"style="margin-left: 5%;">
+      <h2 class="product-title">Half hand shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-7 card">
+      <img class="product-image" src="./shirt3.jfif" alt="" width="250" height="300"style="margin-left: 5%;">
+      
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-content">
+          <h2 class="product-title">Collar T-shirt</h2>
+          <div class="star">
+            <i id="sta" class="bi bi-star-fill"></i>
+            <i id="sta" class="bi bi-star-fill"></i>
+            <i id="sta" class="bi bi-star-fill"></i>
+            <i id="sta" class="bi bi-star-fill"></i>
+            <i id="sta" class="bi bi-star-fill"></i>
+         </div>
+            <span class="product-price">$1395</span>
+        </div>
+    </div>
+    <div class="card-8 card">
+      <img class="product-image" src="./shirt7.jpg" alt="" width="250" height="250"style="margin-left: 5%;">
+      <h2 class="product-title">full hand shirt</h2>
+      <button class="view-details"><a href="./view.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+        <button class="add-to-cart">Add to cart</button>
+        <div class="star">
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+          <i id="sta" class="bi bi-star-fill"></i>
+       </div>
+          <span class="product-price">$1395</span>
+    </div>
+  </div>  
+       <!-- END EDMO HTML (Happy Coding!)-->
+   </main>
+</section>
+
+<section id="Shoes">
+  <h2 class="section-title">shoes & slippers collections</h2>
+  <div class="items-container">
+   
+    <div class="card-1 card">
+      <img class="product-image" src="./addidas football boots.jpg" alt=""width="250" height="250">
+      <h2 class="product-title">addidas Football boots</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+    <div class="card-2 card">
+      <img class="product-image" src="./sparx shoes women.jpg" alt=""width="250" height="250">
+      <h2 class="product-title">Sparx shoes women</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-3 card">
+      <img class="product-image" src="./Formal shoe1.jpg" alt=""width="300" height="300">
+      <h2 class="product-title">Formal shoe</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1150</span>
+    </div>
+    <div class="card-4 card">
+      <img class="product-image" src="./office shoes.jpg" alt="">
+      <h2 class="product-title">Office shoes</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1575</span>
+    </div>
+    <div class="card-5 card">
+      <img class="product-image" src="./junior cricket shoe.jpg" style="margin-left: 10%;" alt="" width="250" height="250">
+      <h2 class="product-title">Junior cricket shoe</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+      <span class="product-price">$1230</span>
+    </div>
+    <div class="card-6 card">
+      <img class="product-image" src="./sparx men slippers.jpg" alt="" width="250" height="250">
+      <h2 class="product-title">Sparx men slippers</h2>
+      <button class="view-details"><a href="./view shoes.css" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-7 card">
+      <img class="product-image" src="./Nikko_black_sandal.jpg" alt=""width="250" height="250">
+      <h2 class="product-title">Cooling glass</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+    <div class="card-8 card">
+      <img class="product-image" src="./addidas slippers.jpg" alt=""width="250" height="250">
+      <h2 class="product-title">Addidas slippers</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+  </div>  
+       <!-- END EDMO HTML (Happy Coding!)-->
+   </main>
+</section>
+
+ <section id="accessories">
+  <h2 class="section-title">accessories collections</h2>
+  <div class="items-container">
+   
+    <div class="card-1 card">
+      <img class="product-image" src="./watch3.jfif" alt=""width="300" height="280">
+      <h2 class="product-title">watch</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+    <div class="card-2 card">
+      <img class="product-image" src="./wallet.jpg" alt=""width="300" height="280">
+      <h2 class="product-title">wallet</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-3 card">
+      <img class="product-image" src="./ring2.jpg" alt=""width="300" height="300">
+      <h2 class="product-title">Ring</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1150</span>
+    </div>
+    <div class="card-4 card">
+      <img class="product-image" src="./headphones.png" alt="">
+      <h2 class="product-title">Headphones</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1575</span>
+    </div>
+    <div class="card-5 card">
+      <img class="product-image" src="./backcase2.jpg" style="margin-left: 10%;" alt="">
+      <h2 class="product-title">Backcase</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+      <span class="product-price">$1230</span>
+    </div>
+    <div class="card-6 card">
+      <img class="product-image" src="./bracelet.jpeg" alt="" width="300" height="280">
+      <h2 class="product-title">Bracelet</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+        <span class="product-price">$1175</span>
+    </div>
+    <div class="card-7 card">
+      <img class="product-image" src="./product5.jpg" alt=""width="300" height="280">
+      <h2 class="product-title">Cooling glass</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+    <div class="card-8 card">
+      <img class="product-image" src="./product6.jpg" alt=""width="300" height="280">
+      <h2 class="product-title">Cap</h2>
+      <button class="view-details"><a href="./view accessories.html" style="text-decoration:none; color: antiquewhite;">view details</a></button>
+      <button class="add-to-cart">Add to cart</button>
+      <div class="star">
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+        <i id="sta" class="bi bi-star-fill"></i>
+     </div>
+          <span class="product-price">$1395</span>
+    </div>
+  </div>  
+       <!-- END EDMO HTML (Happy Coding!)-->
+   </main>
+</section>
+  </section>
+
+</section>
+<section id="blog">
+  <div class="blog-banner">
+    <h4>#blog</h4>
+    <h2>WHERE <span>   FASHION</span>   GETS  EASY </h2>
+</div>
+<div class="blog-section1">
+  <div class="blog-img1">
+    <img src="./blog3.jpg" alt="" width="2200" height="300">
+        </div>
+ <div class="blog-content1">
+  <div class="content-container">
+    <h2 class="head1">Fashions fade, style is <span style="color:rgb(36, 34, 34)">Eternal.</span></h2>
+    <p class="para1">Clothing serves many purposes: it can serve as protection from the<span style="color: brown;"> elements, rough surfaces, sharp stones, rash-causing plants, insect bites,</span> by providing a barrier between the skin and the environment. Clothing can insulate against cold or hot conditions, and it can provide a <span style="color: brown;">hygienic barrier, keeping infectious and toxic materials </span>away from the body. Serious books on clothing and its functions appear from the nineteenth century as European colonial powers interacted with new environments such as <span style="color: brown;">tropical ones in Asia.</span>Some scientific research into the multiple functions  </p>
+  </div>
+ </div> 
+</div>
+   <div class="blog-section2">
+    <div class="blog-img2">
+      <img src="./blog2.jpg" alt="" width="2200" height="300">
+          </div>
+   <div class="blog-content2">
+    <div class="content-container">
+      <h2 class="head2">Buy less,<span style="color:rgb(36, 34, 34)">Choose well,</span>Make it last</h2>
+      <p class="para2">Fashion is a form of <span style="color: brown;"> self-expression and autonomy </span>at a particular period and place and in a specific context, <span style="color: brown;">of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.[1] </span>The term implies a look defined by the fashion industry as that which is trending. <span style="color: brown;">Everything that is considered fashion is available and popularized by the fashion system (industry and media).</span>
+        Given the rise in mass production of commodities and clothing at lower prices and global reach, sustainability has become an urgent issue among <span style="color: brown;">politicians, brands, and consumers.</span></p>
+    </div>
+   </div> 
+ </div>
+</section>
+ <section id="about">
+  <div class="about-section">
+    <div class="about-right">
+      <img src="./about us images.jpg" alt="" width="5000" height="500">
+      </div>
+      <div class="about-left">
+        <div class="about-container">
+          <h2 class="about-head">who we are?</h2>
+          <p class="about-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, fugit. Nesciunt hic iure possimus dolorum? Inventore quos fuga officia, possimus eum earum ut illo a error deleniti quaerat consequuntur animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aliquid laborum culpa delectus neque explicabo? Harum illum soluta vitae nulla tempore pariatur atque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eligendi fugiat quia eaque, optio dolores, omnis iusto impedit laborum unde necessitatibus qui! Illum qui accusamus nesciunt. Quaerat voluptas iusto praesentium?
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+<section id="contact">
+  <h1>CONTACT</h1>  
+   <div class="container">
+<div class="contact-box">
+      <form action="#">
+          <div class="fields">
+            <h5>leave a message</h5>
+            <h2>We love to here a message from you</h2>
+              <div class="field name">
+                  <input type="text" id="fromName"placeholder="Name" required>
+              </div>
+              <div class="field email">
+                  <input type="email" id="mail" placeholder="Email" required>
+              </div>    
+          </div>  
+          <div class="field phno">
+              <input type="number" id="phno" placeholder="Phone Number">
+          </div>              
+          <div class="field subject">
+              <input type="text" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="field textarea">
+              <textarea cols="20" rows="4" id="message" placeholder="Message.." required></textarea>
+          </div>
+          <div class="button-area">
+            <input type="button" style="background-color:#802258;border-radius:10px;"value="submit" onclick="sendMail()">
+          </div>
+      </form>
+  </div>
+  </div>
+
+  
+  
+<div class="contact-us">
+     <div class="contact-detail">
+          <h1 class="section-title">Contact us</h1>
+
+          <ul class="contact-ul">
+            <li><i class="fa fa-location-dot"></i> 91, Ram Nagar, Ram Mandir, Delhi</li>
+
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:08510004495"><b>0255000XXXX</b></a>,
+              <a href="tel:08510005495"><b>0251600XXXX</b></a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:pardeepkumar4bjp@gmail.com"><b> demounknown@gmail.com</b></a>
+            </li>
+          </ul>
+         
+        
+            <h4>visit us on</h4>
+            <div class="social-icons">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+          </div>
+         
+</div>
+<script>
+  function sendMail() {
+    alert("start");
+    var fname = document.getElementById("fromName").value;
+    var cname = document.getElementById("mail").value;
+    var comm = document.getElementById("message").value;
+    alert(fname);
+    alert(cname);
+    alert("here");
+    var templateParams = {
+
+        from_name: fname,
+        to_name: cname,
+        message: comm,
+
+    };
+
+    emailjs.send('service_ciy2cyo', 'template_45wblq4', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert("Form Submitted Successfully!");
+            return true;
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+
+}
+</script>
+    
+</section>
+  
+ 
+
+ 
+  <script  src="./script.js"></script>
+  </body>
+</html>
